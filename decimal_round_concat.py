@@ -18,7 +18,7 @@ for line in f:
     output2 = round(output1,2)
     # Convert rounded decimal value in a string to allow concatenation
     size = str(output2)
-    # Use the "+" sign for concantenation and create a csv output
+    # Use the "+" sign for concatenation and create a csv output
     print  fields[6]+","+fields[7]+","+fields[9]+","+size
 
 #Sample data
