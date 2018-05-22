@@ -8,12 +8,17 @@ size = 0
 # If you need to use stdin instead
 f = sys.stdin
 for line in f:
+    # change field separator to ":"
     fields = line.strip().split(':')
-    # Array indices start at 0 unlike AWK
+    # Convert field 10 to decimal value for maths operation
     output = Decimal(fields[10])
+    # Maths operation
     output1 =(output/1024/1024)
+    # Round the calculated value into 2 decimal places
     output2 = round(output1,2)
+    # Convert rounded decimal value in a string to allow concatenation
     size = str(output2)
+    # Use the "+" sign for concantenation and create a csv output
     print  fields[6]+","+fields[7]+","+fields[9]+","+size
 
 #Sample data
